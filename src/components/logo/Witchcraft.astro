@@ -1,0 +1,25 @@
+
+<h1 id="witchcraft-logo">Witchcraft</h1>
+
+<script>
+	function setColor() {
+		let scrollPosition = Math.min(window.pageYOffset / 4, 100);
+		let saturation = (scrollPosition) + '%'
+		let luminosity = (scrollPosition / 2) + '%'
+		document.getElementById('witchcraft-logo').style.color = "hsl(0, " + saturation + "," + luminosity + ")";
+	}
+
+	window.addEventListener("scroll", function () { setColor() }, false);
+</script>
+
+<style>
+	#witchcraft-logo
+	{
+		font-size: 14vw;
+		letter-spacing: -0.08em;
+		text-align: center;
+		text-transform: uppercase;
+		
+		transform: scaleY(2);
+	}
+</style>
