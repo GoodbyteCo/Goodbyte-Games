@@ -12,7 +12,7 @@
 		bottom: 0;
 		z-index: 999;
 
-		background-image: url("https://goodbyte.games/assets/noise.jpg");
+		background-image: url("https://goodbyte.games/assets/noise.jpeg");
 		background-size: 800px;
 		background-repeat: repeat;
 		
