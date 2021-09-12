@@ -10,11 +10,12 @@ import BackButton from '../../components/BackButton.vue'
 		<title>Midnight Train</title>
 		<meta name="theme-color" content="#e9e1f9">
 		<style>
+			/* stylelint-disable selector-pseudo-class-no-unknown, no-descending-specificity -- fix :global() function */
+
 			@font-face
 			{
 				font-family: "heading";
-				src: url('https://goodbyte.games/assets/font/webfont.woff2') format('woff2'),
-					 url('https://goodbyte.games/assets/font/webfont.woff')  format('woff');
+				src: url("https://fonts.goodbyte.ca/central-ave.woff2") format("woff2"), url("https://fonts.goodbyte.ca/central-ave.woff")  format("woff");
 				font-weight: bold;
 				font-style: normal;
 			}
@@ -42,20 +43,20 @@ import BackButton from '../../components/BackButton.vue'
 			{
 				background: var(--grey-00);
 				color: var(--grey-70);
-				text-rendering: optimizeSpeed; 
-				-webkit-font-smoothing: antialiased;    
+				text-rendering: optimizeSpeed;
+				-webkit-font-smoothing: antialiased;
 				-moz-osx-font-smoothing: grayscale;
-				font-feature-settings:"kern" 1;
+				font-feature-settings: "kern" 1;
 				font-kerning: normal;
-				font-family: -apple-system, BlinkMacSystemFont, 'Futura', Roboto, 'Helvetica Neue', sans-serif;
+				font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
 			}
 
 			body
 			{
 				margin: 0;
-				padding: 0;	
+				padding: 0;
 			}
-			
+
 			#tagline
 			{
 				font-style: italic;
@@ -86,7 +87,7 @@ import BackButton from '../../components/BackButton.vue'
 				max-width: 50rem;
 				margin: 4rem auto 2rem;
 				font-size: 2.5rem;
-				font-family: "heading";
+				font-family: "heading", sans-serif;
 				text-transform: uppercase;
 			}
 
@@ -112,7 +113,7 @@ import BackButton from '../../components/BackButton.vue'
 			{
 				body
 				{
-					padding-top: 40px;
+					padding-block-start: 40px;
 				}
 
 				main

@@ -1,18 +1,18 @@
 <template>
-	<div id="noise" role="presentation"></div>
+	<div id="noise" role="presentation"/>
 </template>
 
 <style scoped>
 	#noise
 	{
 		position: fixed;
-		top: 0;
+		top: 0; /* stylelint-disable */
 		left: 0;
 		right: 0;
 		bottom: 0;
 		z-index: 999;
 
-		background-image: url("https://goodbyte.games/assets/Witchcraft/images/noise.jpg");
+		background-image: url("https://goodbyte.games/assets/noise.jpg");
 		background-size: 800px;
 		background-repeat: repeat;
 		

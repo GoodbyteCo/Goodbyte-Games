@@ -7,7 +7,7 @@
 	{
 		display: block;
 		position: absolute;
-		top: 5px;
+		top: 5px; /* stylelint-disable-line */
 		left: 5px;
 
 		font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, Roboto, sans-serif;
@@ -18,8 +18,8 @@
 		text-rendering: geometricPrecision;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		font-feature-settings:"kern" 1;
-		font-kerning: normal; 
+		font-feature-settings: "kern" 1;
+		font-kerning: normal;
 
 		color: inherit;
 		border: 2px dashed;
@@ -39,7 +39,7 @@
 	{
 		a
 		{
-			right: 5px;
+			right: 5px; /* stylelint-disable-line */
 			text-align: center;
 		}
 	}

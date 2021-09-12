@@ -67,6 +67,7 @@
 		margin: 0 auto;
 	}
 
+	/* stylelint-disable property-no-unknown -- no safari support, but fallback is ok */
 	@counter-style game-number
 	{
 		system: extends decimal;

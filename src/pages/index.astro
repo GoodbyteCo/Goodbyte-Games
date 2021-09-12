@@ -10,23 +10,27 @@ import Noise from '../components/Noise.vue'
 		<title>Goodbyte Games</title>
 		<meta name="theme-color" content="#007944">
 		<style>
+			/* stylelint-disable selector-pseudo-class-no-unknown, no-descending-specificity, selector-list-comma-space-after, max-line-length -- todo: fix in Styleguide */
+			/* stylelint-disable declaration-colon-newline-after, color-function-notation, function-parentheses-newline-inside, value-list-comma-space-after, function-comma-space-after, indentation  -- todo: fix in Styleguide */
+			/* stylelint-disablde value-keyword-case */
+
 			@font-face
 			{
 				font-family: "Editorial New";
-				src: url('https://fonts.goodbyte.ca/editorial-new.woff2') format('woff2'),
-				     url('https://fonts.goodbyte.ca/editorial-new.woff')  format('woff');
+				src: url("https://fonts.goodbyte.ca/editorial-new.woff2") format("woff2"),
+				     url("https://fonts.goodbyte.ca/editorial-new.woff")  format("woff");
 				font-display: block;
 			}
 
 			:global(:root)
 			{
-				--light-green: #CFE4D9;
-				--mid-light-green: #00CB4B;
-				--mid-dark-green: #00AD41;
+				--light-green: #cfe4d9;
+				--mid-light-green: #00cb4b;
+				--mid-dark-green: #00ad41;
 				--dark-green: #007944;
 				--black: #012917;
-				--white: #FFFFFF;
-
+				--white: #ffffff;
+				
 				--primary-font: "Editorial New", Times, serif;
 				--secondary-font: -apple-system, BlinkMacSystemFont, Arial, Helvetica, Roboto, sans-serif;
 			}
@@ -48,8 +52,8 @@ import Noise from '../components/Noise.vue'
 				text-rendering: geometricPrecision;
 				-webkit-font-smoothing: antialiased;
 				-moz-osx-font-smoothing: grayscale;
-				font-feature-settings:"kern" 1;
-				font-kerning: normal; 
+				font-feature-settings: "kern" 1;
+				font-kerning: normal;
 			}
 		</style>
 	</head>
