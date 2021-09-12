@@ -33,6 +33,7 @@
 	ol.games li
 	{
 		margin: 120px 0;
+		animation: slide-in 2s cubic-bezier(0.2, 0.6, 0, 1) 1;
 	}
 
 	.title
@@ -74,6 +75,26 @@
 		pad: 2 "0";
 		prefix: "GAME № ";
 		suffix: "";
+	}
+
+	@keyframes slide-in
+	{
+		0%
+		{
+			transform: translateY(80px);
+			opacity: 0;
+		}
+
+		10%
+		{
+			opacity: 0;
+		}
+
+		100%
+		{
+			transform: translateY(0);
+			opacity: 1;
+		}
 	}
 
 	@media screen and (max-width: 700px)

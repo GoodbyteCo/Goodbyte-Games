@@ -1,8 +1,8 @@
 <template>
 	<a id="logo" href="/">
-		<svg id="curved-text" viewBox="0 0 200 100">
+		<svg id="curved-text" viewBox="0 0 220 100">
 			<!-- eslint-disable-next-line vue/max-len -->
-			<path id="logo-curve" d="M191 71H0a94 94 0 0 1 13-28 98 98 0 0 1 22-23A100 100 0 0 1 63 5a102 102 0 0 1 33-5 102 102 0 0 1 32 5 100 100 0 0 1 28 15 98 98 0 0 1 22 23 94 94 0 0 1 13 28Z" transform="translate(5,10)"/>
+			<path id="logo-curve" d="M191 71H0a94 94 0 0 1 13-28 98 98 0 0 1 22-23A100 100 0 0 1 63 5a102 102 0 0 1 33-5 102 102 0 0 1 32 5 100 100 0 0 1 28 15 98 98 0 0 1 22 23 94 94 0 0 1 13 28Z" transform="translate(16,10)"/>
 			<text dx="200">
 				<textPath xlink:href="#logo-curve">
 					Sometimes we make games, and when we do, they go here.
@@ -28,6 +28,8 @@
 	#curved-text
 	{
 		width: 95%;
+		transform-origin: 50% 110%;
+		animation: rotate-in 2s cubic-bezier(0.2, 0.6, 0, 1) 1;
 	}
 
 	#curved-text path
@@ -58,6 +60,26 @@
 	#logo:focus-visible
 	{
 		background: radial-gradient(rgb(255 52 52 / 0.5) 0%, transparent 70%);
+	}
+
+	@keyframes rotate-in
+	{
+		0%
+		{
+			transform: rotate(-40deg);
+			opacity: 0;
+		}
+
+		10%
+		{
+			opacity: 0;
+		}
+
+		100%
+		{
+			transform: rotate(0deg);
+			opacity: 1;
+		}
 	}
 </style>
 
