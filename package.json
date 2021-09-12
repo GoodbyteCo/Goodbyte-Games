@@ -1,0 +1,17 @@
+{
+	"name": "goodbyte-games",
+	"version": "2.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"lint": "eslint . && stylelint **/*.vue && textlint .",
+		"lint:fix": "eslint . --fix && stylelint **/*.vue --fix && textlint . --fix"
+	},
+	"devDependencies": {
+		"astro": "^0.20.5",
+		"eslint-config-goodbyte-styleguide": "^0.0.7",
+		"stylelint-config-goodbyte-styleguide": "^0.0.6",
+		"textlint-rule-preset-goodbyte-styleguide": "^0.0.5"
+	}
+}

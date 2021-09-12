@@ -1,0 +1,69 @@
+---
+import BasicMeta from '../components/BasicMeta.astro'
+import Logo from '../components/logo/GoodbyteGames.vue'
+import GamesList from '../components/GamesList.vue'
+import Noise from '../components/Noise.vue'
+---
+<html lang="en">
+	<head>
+		<BasicMeta/>
+		<title>Goodbyte Games</title>
+		<meta name="theme-color" content="#007944">
+		<style>
+			/* stylelint-disable selector-pseudo-class-no-unknown, no-descending-specificity, selector-list-comma-space-after, max-line-length -- todo: fix in Styleguide */
+			/* stylelint-disable declaration-colon-newline-after, color-function-notation, function-parentheses-newline-inside, value-list-comma-space-after, function-comma-space-after, indentation  -- todo: fix in Styleguide */
+			/* stylelint-disablde value-keyword-case */
+
+			@font-face
+			{
+				font-family: "Editorial New";
+				src: url("https://fonts.goodbyte.ca/editorial-new.woff2") format("woff2"),
+				     url("https://fonts.goodbyte.ca/editorial-new.woff")  format("woff");
+				font-display: block;
+			}
+
+			:global(:root)
+			{
+				--light-green: #cfe4d9;
+				--mid-light-green: #00cb4b;
+				--mid-dark-green: #00ad41;
+				--dark-green: #007944;
+				--black: #012917;
+				--white: #ffffff;
+				
+				--primary-font: "Editorial New", Times, serif;
+				--secondary-font: -apple-system, BlinkMacSystemFont, Arial, Helvetica, Roboto, sans-serif;
+			}
+
+			:global(::selection)
+			{
+				background-color: var(--mid-dark-green);
+				color: var(--light-green);
+			}
+
+			body
+			{
+				font-family: var(--secondary-font);
+				font-size: 16px;
+				background-color: var(--dark-green);
+				color: var(--mid-light-green);
+				margin: 0;
+
+				text-rendering: geometricPrecision;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				font-feature-settings: "kern" 1;
+				font-kerning: normal;
+			}
+		</style>
+	</head>
+	<body>
+		<Noise/>
+		<header>
+			<Logo/>
+		</header>
+		<main>
+			<GamesList/>
+		</main>
+	</body>
+</html>

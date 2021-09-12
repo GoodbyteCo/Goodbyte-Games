@@ -1,0 +1,37 @@
+
+<h1 id="witchcraft-logo">Witchcraft</h1>
+<p id="tagline">A table-top roleplaying game.</p>
+
+<script>
+	function setColor() {
+		let scrollPosition = Math.min(window.pageYOffset / 4, 100);
+		let saturation = (scrollPosition) + '%'
+		let luminosity = (scrollPosition / 2) + '%'
+		document.getElementById('witchcraft-logo').style.color = "hsl(0, " + saturation + "," + luminosity + ")";
+	}
+
+	window.addEventListener("scroll", function () { setColor() }, false);
+</script>
+
+<style>
+	#witchcraft-logo
+	{
+		font-size: 14vw;
+		letter-spacing: -0.08em;
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 0.4;
+
+		margin-block-start: 200px;
+		transform: scaleY(2);
+	}
+
+	#tagline
+	{
+		font-size: 0.6rem;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0;
+	}
+</style>
