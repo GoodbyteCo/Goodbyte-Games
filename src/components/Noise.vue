@@ -16,9 +16,11 @@
 		background-size: 800px;
 		background-repeat: repeat;
 		
-		opacity: 0.08;
+		opacity: 0.03;
+		mix-blend-mode: color-burn;
 		pointer-events: none;
 		animation: noise 7s steps(10) infinite;
+		will-change: opacity;
 	}
 
 	@keyframes noise

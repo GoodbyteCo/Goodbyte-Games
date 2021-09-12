@@ -8,7 +8,7 @@ import Noise from '../../components/Noise.vue'
 	<head>
 		<BasicMeta/>
 		<title>Witchcraft</title>
-		<meta name="theme-color" content="#949494">
+		<meta name="theme-color" content="#141414">
 		<style>
 			/* stylelint-disable selector-pseudo-class-no-unknown, no-descending-specificity, selector-list-comma-space-after, max-line-length -- todo: fix in Styleguide */
 			/* stylelint-disable declaration-colon-newline-after, color-function-notation, function-parentheses-newline-inside, value-list-comma-space-after, function-comma-space-after, indentation  -- todo: fix in Styleguide */
@@ -22,7 +22,7 @@ import Noise from '../../components/Noise.vue'
 				    url("https://fonts.goodbyte.ca/times-new-roman.ttf")   format("truetype");
 				font-weight: normal;
 				font-style: normal;
-				font-display: swap;
+				font-display: optional;
 			}
 
 			html
@@ -46,9 +46,9 @@ import Noise from '../../components/Noise.vue'
 				right: 0;
 				bottom: 0;
 				pointer-events: none;
-				z-index: 999;
+				z-index: 99;
 
-				opacity: 0.8;
+				opacity: 0.9;
 				box-shadow: inset 0 0 100px 50px #000000;
 				background: radial-gradient(hsla(0, 0%, 0%, 0) 0%,
 					hsla(0, 0%, 0%, 0.013) 10.6%,
@@ -78,6 +78,12 @@ import Noise from '../../components/Noise.vue'
 			:global(a)
 			{
 				color: #eeeeee;
+				transition: color 0.2s ease;
+			}
+
+			:global(a):hover
+			{
+				color: #c40001;
 			}
 
 			:global(h2)
@@ -188,6 +194,27 @@ import Noise from '../../components/Noise.vue'
 				text-align: center;
 				margin: 80px;
 				opacity: 0.6;
+			}
+
+			@media screen and (max-width: 600px)
+			{
+				html
+				{
+					font-size: 24px;
+				}
+			}
+
+			@media screen and (max-width: 500px)
+			{
+				html
+				{
+					font-size: 16px;
+				}
+
+				:global(h2)
+				{
+					font-size: 1.3rem;
+				}
 			}
 		</style>
 	</head>
