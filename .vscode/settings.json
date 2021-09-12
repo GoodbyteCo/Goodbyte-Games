@@ -10,5 +10,17 @@
 		"source.fixAll.stylelint": true
 	},
 	"stylelint.enable": true,
-	"textlint.autoFixOnSave": true
+	"stylelint.validate": ["vue", "css"],
+	"textlint.autoFixOnSave": true,
+	"files.exclude": {
+		"**/.git": true,
+		".gitignore": true,
+		"**/.DS_Store": true,
+		"package-lock.json": true,
+		"node_modules": true,
+		"dist": true,
+		".eslintrc": true,
+		".stylelintrc": true,
+		".textlintrc": true,
+	}
 }
