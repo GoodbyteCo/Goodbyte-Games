@@ -52,6 +52,7 @@
 		max-width: 400px;
 		margin: 60px auto 0;
 		outline: none;
+		text-decoration: none;
 	}
 
 	#logo:focus-visible
