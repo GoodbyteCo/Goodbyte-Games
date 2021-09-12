@@ -8,14 +8,29 @@ import Noise from '../../components/Noise.vue'
 	<head>
 		<BasicMeta/>
 		<title>Witchcraft</title>
-		<meta name="theme-color" content="#e9e1f9">
+		<meta name="theme-color" content="#949494">
 		<style>
+			/* stylelint-disable selector-pseudo-class-no-unknown, no-descending-specificity, selector-list-comma-space-after, max-line-length -- todo: fix in Styleguide */
+			/* stylelint-disable declaration-colon-newline-after, color-function-notation, function-parentheses-newline-inside, value-list-comma-space-after, function-comma-space-after, indentation  -- todo: fix in Styleguide */
+
+			@font-face
+			{
+				font-family: "times-from-import";
+				src: local("Times New Roman"),
+				    url("https://fonts.goodbyte.ca/times-new-roman.woff2") format("woff2"),
+					url("https://fonts.goodbyte.ca/times-new-roman.woff")  format("woff"),
+				    url("https://fonts.goodbyte.ca/times-new-roman.ttf")   format("truetype");
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+
 			html
 			{
-				font-family: 'Times New Roman', Times, serif;
+				font-family: "Times New Roman", "times-from-import", Times, serif;
 				font-size: 28px;
 				line-height: 1.4;
-				background: rgb(122, 122, 122);
+				background: rgb(156 156 156);
 			}
 
 			:global(::selection)
@@ -26,15 +41,15 @@ import Noise from '../../components/Noise.vue'
 			#overlay
 			{
 				position: fixed;
-				top: 0;
+				top: 0; /* stylelint-disable-line */
 				left: 0;
 				right: 0;
 				bottom: 0;
 				pointer-events: none;
 				z-index: 999;
 
-				opacity: 0.7;
-				box-shadow: inset 0 0 100px 50px #000;
+				opacity: 0.8;
+				box-shadow: inset 0 0 100px 50px #000000;
 				background: radial-gradient(hsla(0, 0%, 0%, 0) 0%,
 					hsla(0, 0%, 0%, 0.013) 10.6%,
 					hsla(0, 0%, 0%, 0.049) 20.3%,
@@ -62,7 +77,7 @@ import Noise from '../../components/Noise.vue'
 
 			:global(a)
 			{
-				color: #eee
+				color: #eeeeee;
 			}
 
 			:global(h2)
@@ -74,7 +89,7 @@ import Noise from '../../components/Noise.vue'
 				text-transform: uppercase;
 				line-height: 0.9;
 				scroll-padding: 200px;
-				
+
 				transform: scaleY(2);
 			}
 
@@ -102,21 +117,21 @@ import Noise from '../../components/Noise.vue'
 			}
 
 			:global(ul),
-			:global(ol) 
+			:global(ol)
 			{
-				padding-left: 30px;
+				padding-inline-start: 30px;
 			}
 
 			:global(ul) :first-child,
 			:global(ol) :first-child
 			{
-				margin-top: 0;
+				margin-block-start: 0;
 			}
 
 			:global(ul) :last-child,
 			:global(ol) :last-child
 			{
-				margin-bottom: 0;
+				margin-block-end: 0;
 			}
 
 			:global(blockquote)
@@ -130,7 +145,7 @@ import Noise from '../../components/Noise.vue'
 
 			:global(code)
 			{
-				font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+				font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
 				font-weight: 600;
 				font-size: 0.8em;
 				letter-spacing: 0.02em;
@@ -145,8 +160,8 @@ import Noise from '../../components/Noise.vue'
 
 			:global(tr)
 			{
-				border-top: 1px solid #aaa;
-				background-color: #aaa;
+				border-top: 1px solid #aaaaaa;
+				background-color: #aaaaaa;
 				margin: 0;
 				padding: 0;
 			}
@@ -154,16 +169,16 @@ import Noise from '../../components/Noise.vue'
 			:global(th)
 			{
 				font-weight: bold;
-				border: 1px solid #aaa;
-				text-align: left;
+				border: 1px solid #aaaaaa;
+				text-align: start;
 				margin: 0;
 				padding: 6px 13px;
 			}
 
 			:global(td)
 			{
-				border: 1px solid #aaa;
-				text-align: left;
+				border: 1px solid #aaaaaa;
+				text-align: start;
 				margin: 0;
 				padding: 6px 13px;
 			}
