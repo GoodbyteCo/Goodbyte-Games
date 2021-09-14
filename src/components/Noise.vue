@@ -20,7 +20,6 @@
 		mix-blend-mode: color-burn;
 		pointer-events: none;
 		animation: noise 7s steps(10) infinite;
-		will-change: opacity;
 	}
 
 	@keyframes noise
