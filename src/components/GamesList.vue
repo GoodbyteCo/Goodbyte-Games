@@ -9,6 +9,10 @@
 			<p>A game about witches.</p>
 		</li>
 		<li>
+			<a href="/games/plank" class="title">Plank</a>
+			<p>The smallest possible unit of game.</p>
+		</li>
+		<li>
 			<a href="/games/silverscreen" class="title">Silverscreen</a>
 			<p>A system for collaborative storytelling that focuses on generating cinematic gameplay.</p>
 		</li>

@@ -1,0 +1,103 @@
+---
+import { Markdown } from 'astro/components'
+import BasicMeta from '../../components/BasicMeta.astro'
+---
+<html lang="en">
+	<head>
+		<BasicMeta/>
+		<title>Plank</title>
+		<meta name="theme-color" content="#e0d6c6">
+		<style>
+			html
+			{
+				font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+				font-size: 18px;
+				letter-spacing: 0.02em;
+				line-height: 1.7;
+				text-rendering: optimizeSpeed; 
+				-webkit-font-smoothing: antialiased;    
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-feature-settings:"kern" 1;
+				font-feature-settings: "kern" 1;
+				font-kerning: normal;
+
+				background-color: #e0d6c6;
+				color: rgba(0, 0, 0, 0.8);
+			}
+
+			body
+			{
+				margin: 0;
+			}
+
+			main
+			{
+				max-width: 70ch;
+				margin: 60px auto;
+				padding: 20px;
+			}
+
+			:global(p)
+			{
+				margin: 2rem 0;
+			}
+
+			h1, #back
+			{
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+				font-size: 0.6rem;
+				font-weight: bold;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				text-align: center;
+
+				margin: 200px 0;
+			}
+
+			#back
+			{
+				display: block;
+				margin: 0;
+				padding: 5px 10px;
+				border-bottom: 1px solid;
+
+				color: rgba(0, 0, 0, 0.6);
+				text-decoration: none;
+				letter-spacing: 0.02em;
+				text-align: start;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<a id="back" href="/">← Back to all games</a>
+			<h1>Plank</h1>
+		</header>
+		<main>
+			<Markdown>
+			To begin, choose one person to be the Game Master. While the Game Master comes up with a setting for the story,
+			the other players should come up with their character. Pick a name and a short description, such as, “Jora is a
+			sentient Roomba with some (literal) screws missing.” Don’t worry about coming up with any backstory, you can
+			make that up as you go along. Instead, write down something your character is good at. The more specific it is,
+			the better they’ll be at it—someone who is good at everything is rarely great at anything. You can write up to
+			three things that your character is good at, but you must also write something they are bad at for each.
+			
+			Once everyone is done, take turns introducing your character to the room. The Game Master goes last, and instead
+			introduces the world you will be playing in. The players then role-play as their characters and tell the Game
+			Master what they want to do. While playing, the players may use any item that would make sense for their
+			character to have. A musician would have a guitar, but a wizard would not have a gun.
+			
+			When an action a player wishes to take involves a notable amount of skill or luck, the Game Master will instruct
+			the player to “flip for it.” If you have only one coin, take turns flipping (the player then the Game Master),
+			but flip synchronously if you have two. If both coins land on tails, then the character fails to perform the
+			action, worsening the situation. If both land on heads, they succeed. When one lands on heads and the other
+			tails, it is up to the discretion of the Game Master to decide if they succeed or not. Take into consideration
+			the difficulty of the scenario and whether the character is good or bad at that task. As a result, the Game
+			Master may decide that they: (1) fail the action and face unintended consequences, (2) perform the action but
+			encounter complications, or (3) succeed in an unremarkable way.
+			
+			Play out the story until it naturally comes to a conclusion, or you run out of time.
+			</Markdown>
+		</main>
+	</body>
+</html>
