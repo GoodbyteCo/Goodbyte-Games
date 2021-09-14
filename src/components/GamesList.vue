@@ -39,7 +39,7 @@
 	.title
 	{
 		font-family: var(--primary-font);
-		color: var(--light-green);
+		color: var(--green-90);
 		font-size: 9.2rem;
 		letter-spacing: -0.04em;
 		line-height: 0.9;
@@ -47,12 +47,13 @@
 		display: block;
 		position: relative;
 		transition: transform 50ms ease-out;
+		text-rendering: geometricPrecision;
 	}
 
 	.title:hover, .title:focus
 	{
 		color: transparent;
-		-webkit-text-stroke: 2px var(--light-green);
+		-webkit-text-stroke: 2px var(--green-90);
 		outline: none;
 		transform: scale(0.96);
 	}
@@ -63,6 +64,8 @@
 		font-size: 1.5rem;
 		letter-spacing: 0.01em;
 		line-height: 1.5;
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
 
 		max-width: 40ch;
 		margin: 0 auto;

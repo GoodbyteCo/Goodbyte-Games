@@ -20,7 +20,7 @@
 	text
 	{
 		font-family: var(--primary-font);
-		fill: var(--light-green);
+		fill: var(--green-90);
 		font-size: 11px;
 		letter-spacing: -0.02em;
 	}
@@ -39,7 +39,7 @@
 
 	#goodbyte-games-logo
 	{
-		fill: var(--mid-light-green);
+		fill: var(--green-60);
 		width: 40%;
 		margin: auto;
 		display: block;

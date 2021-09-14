@@ -23,12 +23,13 @@ import GamesList from '../components/GamesList.vue'
 
 			:global(:root)
 			{
-				--light-green: #cfe4d9;
-				--mid-light-green: #00cb4b;
-				--mid-dark-green: #00ad41;
-				--dark-green: #007944;
-				--black: #012917;
 				--white: #ffffff;
+				--green-90: #cfe4d9;
+				--green-60: #00cb4b;
+				--green-40: #00ad41;
+				--green-10: #006b3e;
+				--green-00: #00472a;
+				--black: #012917;
 				
 				--primary-font: "Editorial New", Times, serif;
 				--secondary-font: -apple-system, BlinkMacSystemFont, Arial, Helvetica, Roboto, sans-serif;
@@ -36,19 +37,19 @@ import GamesList from '../components/GamesList.vue'
 
 			:global(::selection)
 			{
-				background-color: var(--mid-dark-green);
-				color: var(--light-green);
+				background-color: var(--green-40);
+				color: var(--green-90);
 			}
 
 			body
 			{
 				font-family: var(--secondary-font);
 				font-size: 16px;
-				background-color: var(--dark-green);
-				color: var(--mid-light-green);
+				background-color: var(--green-10);
+				color: var(--green-60);
 				margin: 0;
 
-				text-rendering: geometricPrecision;
+				text-rendering: optimizeLegibility;
 				-webkit-font-smoothing: antialiased;
 				-moz-osx-font-smoothing: grayscale;
 				font-feature-settings: "kern" 1;
