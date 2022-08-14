@@ -1,6 +1,6 @@
 ---
 title: Simple Inventory
-description: "Inventory is annoying to manage. So don't"
+description: "Inventory is annoying to manage -- so don't"
 date: 2022-08-13
 layout: ../../layouts/SimpleMarkdown.astro
 ---
