@@ -1,5 +1,6 @@
 ---
 title: Controlling Power
+description: "Rules for controlling uncontrollable powers"
 date: 2022-08-13
 layout: ../../layouts/SimpleMarkdown.astro
 ---
