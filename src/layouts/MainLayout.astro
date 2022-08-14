@@ -1,0 +1,66 @@
+---
+import BasicMeta from "../components/BasicMeta.astro";
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<BasicMeta />
+	</head>
+	<body>
+		<slot/>
+	</body>
+</html>
+
+<style is:global>
+	/* stylelint-disable selector-pseudo-class-no-unknown, no-descending-specificity, selector-list-comma-space-after, max-line-length -- todo: fix in Styleguide */
+	/* stylelint-disable declaration-colon-newline-after, color-function-notation, function-parentheses-newline-inside, value-list-comma-space-after, function-comma-space-after, indentation  -- todo: fix in Styleguide */
+	/* stylelint-disablde value-keyword-case */
+
+	@font-face
+	{
+		font-family: "Editorial New";
+		src: url("https://fonts.goodbyte.ca/editorial-new.woff2") format("woff2"),
+				url("https://fonts.goodbyte.ca/editorial-new.woff")  format("woff");
+		font-display: block;
+	}
+
+	:root
+	{
+		--white: #ffffff;
+		--green-90: #cfe4d9;
+		--green-60: #00cb4b;
+		--green-40: #00ad41;
+		--green-10: #006b3e;
+		--green-00: #00472a;
+		--black: #012917;
+		
+		--primary-font: "Editorial New", Times, serif;
+		--secondary-font: -apple-system, BlinkMacSystemFont, Arial, Helvetica, Roboto, sans-serif;
+	}
+
+	::selection
+	{
+		background-color: var(--green-40);
+		color: var(--green-90);
+	}
+
+	html
+	{
+		background-color: var(--green-10);
+	}
+
+	body
+	{
+		font-family: var(--secondary-font);
+		font-size: 16px;
+		background-color: var(--green-10);
+		color: var(--green-60);
+		margin: 0;
+
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-feature-settings: "kern" 1;
+		font-kerning: normal;
+	}
+</style>

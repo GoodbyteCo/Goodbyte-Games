@@ -1,0 +1,84 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro'
+interface Frontmatter {
+  title: string;
+  date: string;
+}
+const ideas = await Astro.glob<Frontmatter>('./*.md')
+const byDate = (a, b) => new Date(a.frontmatter.date).valueOf() - new Date(b.frontmatter.date).valueOf()
+---
+
+<MainLayout>	
+	<header>
+		<a href="/">
+			← Home
+		</a>
+	</header>
+	<main>
+		<h1>Loose ideas</h1>
+		<ol>
+		{
+			ideas.sort(byDate).map(idea => (
+				<li>
+					<a href={idea.url}>
+						<h2>{idea.frontmatter.title}</h2>
+					</a>
+				</li>
+			))
+		}
+		</ol>
+	</main>
+</MainLayout>
+
+<style>
+	main
+	{
+		padding: 40px 60px;
+	}
+
+	header a
+	{
+		display: block;
+		margin: 0;
+		padding: 5px 10px;
+		border-bottom: 1.5px solid;
+
+		color: var(--green-60);
+		text-decoration: none;
+		letter-spacing: 0.04em;
+		text-align: start;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	h1
+	{
+		font-family: var(--primary-font);
+	}
+
+	ol, li
+	{
+		padding: 0px;
+		font-size: 2rem;
+	}
+
+	a
+	{
+		color: inherit;
+		text-decoration: none;
+	}
+
+	h2
+	{
+		font-family: var(--primary-font);
+		color: var(--green-90);
+		letter-spacing: -0.04em;
+		line-height: 0.9;
+		text-decoration: none;
+		display: block;
+		position: relative;
+		transition: transform 50ms ease-out;
+		text-rendering: geometricPrecision;
+		font-weight: 500;
+	}
+</style>
