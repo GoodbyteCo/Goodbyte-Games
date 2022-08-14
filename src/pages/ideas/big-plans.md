@@ -1,6 +1,6 @@
 ---
 title: Big Plans
-description: "Rules for playing games that allow for big plans"
+description: "How to encourage 2-step thinking"
 date: 2022-08-13
 layout: ../../layouts/SimpleMarkdown.astro
 ---
@@ -10,7 +10,9 @@ Unfortunately, things rarely go well. Standard table-top games discourage multi-
 of failure for every additional step of the plan. If your plan has 10 steps, you must roll 10 times. This gives you
 10 opportunities to fail — failing any of which fails the entire plan (or at best, complicates it).
 
-If we want to _encourage_ complex plans, we must make it mechanically advantageous to perform multi-step actions.
+This is why most players resort to direct, 1-step actions. _"I attack the whatever thing"._ There is no cost to failing
+beyond losing the move at hand. If we want to _encourage_ complex plans, we must make it mechanically advantageous to
+perform them.
 
 ## Collaborative plans
 
