@@ -8,7 +8,7 @@ const ideas = await Astro.glob<Frontmatter>('./*.md')
 const byDate = (a, b) => new Date(a.frontmatter.date).valueOf() - new Date(b.frontmatter.date).valueOf()
 ---
 
-<MainLayout title="Goodbyte Games: Loose Ideas" description="A collection of loose ideas">	
+<MainLayout title="Goodbyte Games: Ideas" description="A collection of loose ideas">	
 	<header>
 		<a href="/">
 			← Home
@@ -18,13 +18,17 @@ const byDate = (a, b) => new Date(a.frontmatter.date).valueOf() - new Date(b.fro
 		<h1>Loose ideas</h1>
 		<ol>
 		{
-			ideas.sort(byDate).map(idea => (
-				<li>
-					<a href={idea.url}>
-						<h2>{idea.frontmatter.title}</h2>
-					</a>
-				</li>
-			))
+			ideas.sort(byDate)
+				.reverse()
+				.map(idea =>
+				(
+					<li>
+						<a href={idea.url}>
+							<h2>{idea.frontmatter.title}</h2>
+						</a>
+					</li>
+				)
+			)
 		}
 		</ol>
 	</main>
