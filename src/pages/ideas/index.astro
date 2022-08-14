@@ -1,8 +1,8 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro'
 interface Frontmatter {
-  title: string;
-  date: string;
+	title: string;
+	date: string;
 }
 const ideas = await Astro.glob<Frontmatter>('./*.md')
 const byDate = (a, b) => new Date(a.frontmatter.date).valueOf() - new Date(b.frontmatter.date).valueOf()
