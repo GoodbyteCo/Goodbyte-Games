@@ -1,10 +1,15 @@
 ---
-import BasicMeta from "../components/BasicMeta.astro";
+import BasicMeta, { MetaProps } from "../components/BasicMeta.astro";
+
+const {description, title} = Astro.props as MetaProps
 ---
 <!DOCTYPE html>
 <html>
 	<head>
-		<BasicMeta />
+		<BasicMeta 
+			description={description}
+			title={title}
+		/>
 	</head>
 	<body>
 		<slot/>

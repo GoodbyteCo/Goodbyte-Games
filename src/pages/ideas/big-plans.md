@@ -1,5 +1,6 @@
 ---
 title: Big Plans
+description: "Rules for playing games that allow for big plans"
 date: 2022-08-13
 layout: ../../layouts/SimpleMarkdown.astro
 ---

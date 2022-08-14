@@ -1,9 +1,13 @@
 ---
 import MainLayout from "./MainLayout.astro";
+import { MetaProps } from "../components/BasicMeta.astro";
 const dateOptions: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' } 
 const {frontmatter} = Astro.props
 ---
-<MainLayout>
+<MainLayout 
+	title={frontmatter.title}
+	description={frontmatter.description}
+>
 	<header>
 		<a href="/ideas">
 			← Ideas
