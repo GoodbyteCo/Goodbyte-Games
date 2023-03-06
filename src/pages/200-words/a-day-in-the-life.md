@@ -2,7 +2,7 @@
 title: A day in the life
 description: "A short game about a day in your life"
 date: 2018-05-01
-layout: ../../layouts/SimpleMarkdown.astro
+layout: ../../layouts/SimpleMarkdown200Words.astro
 ---
 
 You are creating a world together. One where people live, go to work, and maybe something out of the ordinary happens. It can be as mundane, or as fantastical, as you desire.

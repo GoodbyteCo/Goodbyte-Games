@@ -2,7 +2,7 @@
 title: "Beat the Heat"
 description: "A Hot Sauce RPG"
 date: 2018-05-01
-layout: ../../layouts/SimpleMarkdown.astro
+layout: ../../layouts/SimpleMarkdown200Words.astro
 ---
 ### Setup
 

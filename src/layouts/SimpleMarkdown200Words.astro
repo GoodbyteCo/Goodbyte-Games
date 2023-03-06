@@ -1,0 +1,81 @@
+---
+import MainLayout from "./MainLayout.astro";
+import { MetaProps } from "../components/BasicMeta.astro";
+const dateOptions: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' } 
+const {frontmatter} = Astro.props
+---
+<MainLayout 
+	title={frontmatter.title}
+	description={frontmatter.description}
+>
+	<header>
+		<a href="/200-words">
+			← 200 Words
+		</a>
+	</header>
+    <article>
+		<h1>{frontmatter.title}</h1>
+		<p class="date">
+			{new Date(frontmatter.date).toLocaleDateString('en-US', dateOptions)}
+		</p>
+		<slot/>
+	</article>
+</MainLayout>
+
+<style>
+	header a
+	{
+		display: block;
+		margin: 0;
+		padding: 5px 10px;
+		border-bottom: 1.5px solid;
+
+		color: var(--green-60);
+		text-decoration: none;
+		letter-spacing: 0.04em;
+		text-align: start;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	article
+	{
+		max-width: 70ch;
+		margin: 0 auto;
+		padding: 60px 20px;
+
+		font-family: var(--primary-font);
+		font-size: 18px;
+	}
+
+	h1
+	{
+		font-size: 5rem;
+		line-height: 1;
+		margin: 0;
+		font-weight: 500;
+	}
+
+	.date
+	{
+		font-family: var(--secondary-font);
+		color: var(--green-60);
+		opacity: 1;
+	}
+
+	:global(h2)
+	{
+		font-size: 1.8em;
+		margin-top: 1.5em;
+		font-weight: 500;
+	}
+
+	:global(p)
+	{
+		color: var(--green-90);
+		opacity: 0.825;
+		line-height: 1.6;
+
+		margin-bottom: 1.5em;
+	}
+</style>
